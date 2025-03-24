@@ -3,6 +3,7 @@ import { PlayCircle } from "lucide-react";
 import HeroCard from "./HeroCard";
 import org1Config from "../org1.config";
 import Header from "../../../components/common/Header"
+import { heroCard01 } from "../assets";
 
 const HeroSection = () => {
     return (
@@ -16,17 +17,17 @@ const HeroSection = () => {
                     </h1>
                     <p className="text-md md:text-lg mb-6">We can create a better future for all.</p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full text-sm font-semibold">
+                        <button className="cursor-pointer bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
                             Donate Now
                         </button>
-                        <button className="flex items-center gap-2 text-white border border-white px-6 py-3 rounded-full text-sm hover:bg-white hover:text-black transition">
+                        <button className="cursor-pointer flex items-center gap-2 text-white border border-white px-6 py-2 rounded-full text-sm hover:bg-white hover:text-black transition">
                             <PlayCircle className="w-5 h-5" /> Watch video
                         </button>
                     </div>
                 </div>
             </section>
             <section className="hero-cards-main-cover-wrapper -mt-[100px]">
-                <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 max-w-3xl mx-auto">
+                <div className="grid gap-6  sm:grid-cols-2 md:grid-cols-4 max-w-[75%] mx-auto">
                     {org1Config?.HerocardsData.map((card, index) => (
                         <HeroCard
                             key={index}
@@ -34,8 +35,11 @@ const HeroSection = () => {
                             description={card.description}
                             btnText={card.btnText}
                             bgImage={card.bgImage}
+                            index={index}
+                            icon={card.icon}
                         />
                     ))}
+
                 </div>
             </section>
         </>

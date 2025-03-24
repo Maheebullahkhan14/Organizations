@@ -1,6 +1,8 @@
 import { FaHeart, FaPhoneAlt, FaHandsHelping } from "react-icons/fa";
 import { aboutBanner } from "../assets";
 import commonTitle from "./commonTitle";
+import { BsChevronDoubleRight } from "react-icons/bs";
+
 
 const AboutUs = () => {
     return (
@@ -13,10 +15,10 @@ const AboutUs = () => {
             {/* Right Content */}
             <div className="w-full md:w-1/2 space-y-5">
                 <commonTitle title="About Us"/>
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                <h2 className="text-2xl md:text-2xl font-bold text-gray-900 leading-tight">
                     Championing Youth, Securing Rights, Creating Impact.
                 </h2>
-                <p className="text-gray-600">
+                <p className="text-gray-600 text-[14px]">
                     At All Youth Rights Organization, We empower youth, protect their
                     rights, and amplify their voices for a better future.
                 </p>
@@ -32,12 +34,23 @@ const AboutUs = () => {
 
                 {/* Bottom row */}
                 <div className="flex flex-col sm:flex-row items-center gap-5 mt-6">
-                    <button className="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 flex items-center gap-2 text-lg">
+                    <button className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 flex items-center gap-2 text-[14px]">
+                        <span className="btn-icon">
+                            <BsChevronDoubleRight/>
+                        </span>
                         Know More
                     </button>
                     <div className="flex items-center gap-3">
-                        <FaPhoneAlt className="text-orange-500" />
-                        <span className="text-gray-700 text-lg">+91 300-415-1686</span>
+                        <FaPhoneAlt className="text-orange-500 phone-icon" />
+                        <h6 className="flex flex-col">
+                            <span className="text-[12px] text-gray-400">
+                                Call Anytime
+                            </span>
+                            <span className="text-gray-700 text-lg text-[14px]">
+                                
+                                +91 300-415-1686</span>
+
+                        </h6>
                     </div>
                 </div>
             </div>

@@ -1,13 +1,16 @@
 
 import org1Config from "../org1.config";
-import commonTitle from "./commonTitle";
+import { FaHeart, FaCheckCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const HowYouCanHelp = () => {
   return (
     <section className="py-16 px-4 md:px-20 bg-white md:w-6xl mx-auto">
       <div className="text-center mb-12">
-        <commonTitle title="How You Can Help" />
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4">
+        <div className=" text-cen flex justify-center items-center gap-2 text-orange-500 font-semibold text-lg">
+          <FaHeart /> How You Can Help
+        </div>
+        <h2 className="text-3xl md:text-3xl font-bold text-gray-900 mt-4">
           Be the Change You <br className="hidden md:block" /> Want to See
         </h2>
       </div>
@@ -26,9 +29,14 @@ const HowYouCanHelp = () => {
             <div className="absolute inset-0 p-6 flex flex-col justify-end text-white">
               <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
               <p className="text-gray-200 mb-4">{item.desc}</p>
-              <div className="backdrop-blur-md bg-white/20 rounded-xl p-3 w-fit text-sm font-semibold border border-white/30 shadow-lg hover:bg-white/30 transition">
-                {item.cta}
+              <div className="how-can-help-btn">
+                <button>
+                  <Link>
+                    {item.cta}
+                  </Link>
+                </button>
               </div>
+       
             </div>
           </div>
         ))}

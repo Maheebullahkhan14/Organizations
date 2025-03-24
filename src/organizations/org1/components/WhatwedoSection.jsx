@@ -3,16 +3,16 @@ import { whatwedoBanner } from "../assets";
 
 const WhatWeDoSection = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between py-16 px-4 md:px-20 gap-10 bg-gray-50">
+    <section className="flex  mx-auto flex-col md:flex-row items-center justify-between py-16 px-8 md:px-40 gap-10 bg-gray-50">
       {/* Left Content */}
       <div className="w-full md:w-1/2 space-y-5">
         <div className="flex items-center gap-2 text-orange-500 font-semibold text-lg">
           <FaHeart /> What We Do
         </div>
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+        <h2 className="text-2xl md:text-4xl font-semibold text-gray-900">
           Stand for Youth, Stand for Rights
         </h2>
-        <p className="text-gray-600">
+        <p className="text-gray-600 text-[15px]">
           We believe in empowering young individuals by advocating for their
           rights, amplifying their voices, and ensuring they have access to
           opportunities that shape a brighter future.
@@ -26,7 +26,7 @@ const WhatWeDoSection = () => {
           ].map((item, index) => (
             <div key={index} className="flex flex-column items-center gap-3">
               <FaCheckCircle className="text-orange-500" />
-              <span className="text-gray-700 text-lg">{item}</span>
+              <span className="text-gray-800 text-[17px]">{item}</span>
             </div>
           ))}
         </div>
