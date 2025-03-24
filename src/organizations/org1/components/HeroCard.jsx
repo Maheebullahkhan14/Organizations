@@ -2,7 +2,7 @@ import React from "react";
 
 const HeroCard = ({ title, description, btnText, bgImage, index , icon}) => {
   return (
-    <div className={`hero-card-box text-center relative flex bg-white z-1 ${index == 2 ? "col-span-2" : ""}` }>
+    <div className={`hero-card-box text-center relative flex bg-white z-1 }` }>
       <div className="relative z-10 flex flex-col items-center p-4 hero-card-content">
         <div className="text-orange-500 mb-4">
           <img src={icon} width="40px" height="40px" alt={title}></img>

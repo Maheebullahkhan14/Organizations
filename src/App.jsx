@@ -4,6 +4,7 @@ import OrganizationLayout from './layouts/OrganizationLayout';
 import DynamicOrgPage from './organizations/DynamicOrgPage';
 
 
+
 const AppRoutes = () => (
     <Routes>
 
