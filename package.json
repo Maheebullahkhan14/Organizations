@@ -17,6 +17,7 @@
     "react-scripts": "5.0.1",
     "react-swiper": "^0.1.5",
     "swiper": "^11.2.6",
+    "tailwindcss": "^4.0.15",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
@@ -24,7 +25,8 @@
     "start": "react-scripts start",
     "build": "vite build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
     "extends": [
@@ -45,10 +47,10 @@
     ]
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.15",
     "@vitejs/plugin-react": "^4.3.4",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.8"
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.3"
   }
 }
