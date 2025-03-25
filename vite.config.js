@@ -6,6 +6,6 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     assetsInclude: ["**/*.mp4"],
-    base: mode === 'production' ? '/Maheebullahkhan14/Organizations/' : '/',
+    base: '/Maheebullahkhan14/Organizations/'
   }
 })
