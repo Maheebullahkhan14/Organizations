@@ -6,6 +6,6 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     assetsInclude: ["**/*.mp4"],
-    base: '/Maheebullahkhan14/Organizations/'
+    base: process.env.VITE_BASE_PATH || '/Organizations',
   }
 })
