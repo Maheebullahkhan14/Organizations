@@ -1,0 +1,20 @@
+import heroBanner from "../../education_organization/assets/hero-image.png"
+import aboutBanner from "../../education_organization/assets//hero-image2.png"
+import heroArrowIcon from "../../education_organization/assets/hero-arrow.png"
+import team01 from "../../education_organization/assets/team_01.png"
+import team02 from "../../education_organization/assets/team_02.png"
+import team03 from "../../education_organization/assets/team_03.png"
+import team04 from "../../education_organization/assets/team_04.png"
+import tickIcon from "../../education_organization/assets/tick-icon.png"
+import circulartxt from "../../education_organization/assets/educate-txt.png"
+import service01 from "../../education_organization/assets/service_01.png"
+import service02 from "../../education_organization/assets/service_02.png"
+import service03 from "../../education_organization/assets/service_03.png"
+import service04 from "../../education_organization/assets/service_04.png"
+import membersBanner from "../../education_organization/assets/membership.png"
+import mainLogo from "../../education_organization/assets/broker-logo.png"
+import phoneIcon from "../../education_organization/assets/Phone.png"
+import contactArrowIcon from "../../education_organization/assets/footer-arrow-icon.png"
+
+
+export { heroBanner , aboutBanner , heroArrowIcon ,team01 , team03 , team04 , team02 , tickIcon , circulartxt ,service01,service02,service03,service04 , membersBanner , mainLogo , phoneIcon , contactArrowIcon}
