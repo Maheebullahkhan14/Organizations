@@ -1,10 +1,10 @@
-import { heroBanner, aboutBanner, heroArrowIcon, team01, team02, team03, team04, tickIcon, circulartxt, service01, service02, service03, service04, membersBanner , mainLogo , phoneIcon , contactArrowIcon } from "../assets";
+import { heroBanner, aboutBanner, heroArrowIcon, team01, team02, team03, team04, tickIcon, circulartxt, service01, service02, service03, service04, membersBanner, mainLogo, phoneIcon, contactArrowIcon, whiteArrowIcon } from "../assets";
 import "../../education_organization/education_org.css"
-
+import { Link } from "react-router-dom";
 const Education_organization_app = () => {
   return (
     <div className="font-sans text-gray-800 education-app-cover">
-      <Header/>
+      <Header />
       <Hero />
       <About />
       <Services />
@@ -21,11 +21,11 @@ export const Header = () => {
     <div className="flex justify-between items-center px-6 py-4">
       {/* Logo */}
       <div className="ml-5">
-        <img src={mainLogo} alt="Logo" className="h-12 object-contain" />
+        <img src={mainLogo} alt="Logo" className="h-16 object-contain" />
       </div>
 
       {/* Navigation Links */}
-      <div className="flex space-x-6 font-semibold">
+      <div className="flex space-x-6 font-semibold header-nav">
         <a href="#Home" className="text-gray-800 hover:text-teal-500">
           Home
         </a>
@@ -41,11 +41,11 @@ export const Header = () => {
       </div>
 
       {/* Contact Us Button */}
-      <a href="#" className="flex items-center gap-2 mr-5 text-white bg-teal-400 px-4 py-2 rounded-full hover:bg-teal-500 transition">
+      <a href="#" className="flex items-center  transition contact-header-btn">
         <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full">
           <img src={phoneIcon} alt="Phone Icon" className="w-5 h-5" />
         </div>
-        <span className="text-sm font-medium">Contact Us</span>
+        <span className="text-sm font-medium ml-2">Contact Us</span>
       </a>
     </div>
   )
@@ -59,7 +59,7 @@ export const Hero = () => {
 
         <div className="md:w-1/2 mb-8 md:mb-0 flex justify-center">
           <div className="text-center md:text-left ">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
               Empowering Education.<br />
               Supporting Institutions.<br />
               Uplifting Educators.
@@ -68,8 +68,10 @@ export const Hero = () => {
               Join the movement that’s transforming India’s education ecosystem.
             </p>
             <div className="flex items-center justify-center md:justify-start gap-4">
-              <button className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full text-sm sm:text-base">
+              <button className="bg-green-500 flex flex-row items-center hover:bg-green-600 text-white px-6 py-2 rounded-full text-sm sm:text-base become-mem-btn">
                 Become a Member
+                <img src={whiteArrowIcon} alt="Logo" className="h-8 ml-3 object-contain" />
+
               </button>
               <div className="text-left flex flex-col items-center md:items-start">
                 {/* <img src={arrowIcon} alt="arrow" className="w-12 h-auto" /> */}
@@ -107,12 +109,12 @@ export const About = () => {
           />
 
           {/* Round Text Badge */}
-          <div className="absolute top-0 p-3 left-1/2 -translate-y-1/2 ml-20 w-40 h-40 rounded-full bg-green-600 flex items-center justify-center">
+          <div className="absolute top-0 p-3 left-1/2 -translate-y-1/2 ml-20 w-40 h-40 rounded-full bg-[#3E8D5A] flex items-center justify-center">
             <img src={circulartxt} alt="Badge" className="custom-rotate" />
           </div>
 
           {/* Vision Box */}
-          <div className="absolute left-5 -bottom-6 w-[250px] bg-[#ebefed] rounded-3xl shadow p-4">
+          <div className="absolute left-18 -bottom-6 w-[250px] bg-[#ebefed] rounded-4xl shadow px-6 py-5">
             <h6 className="text-lg font-bold mb-2">Our Vision</h6>
             <p className="text-sm leading-relaxed">
               To elevate Indian education to global standards by empowering every stakeholder — institutions, educators, and students.
@@ -218,7 +220,7 @@ export const Services = () => {
         ].map((service, index) => (
           <div
             key={index}
-            className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center border-b pb-8"
+            className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center custom-border pb-8"
           >
             <div className="md:col-span-1 text-3xl font-bold">{service.number}</div>
             <div className="md:col-span-4 font-semibold text-3xl font-[Pragati_Narrow]">
@@ -284,15 +286,15 @@ export const MembershipBenefits = () => {
             {/* Button */}
             <a
               href="#"
-              className="mt-8 inline-flex items-center gap-3 bg-green-600 rounded-full w-fit px-6 py-3"
+              className="mt-8 inline-flex items-center gap-3 bg-[#3E8D5A] rounded-full w-fit py-2 px-2"
             >
-              <div className="bg-teal-100 text-green-800 font-semibold px-4 py-2 rounded-full text-lg">
+              <div className="bg-white text-green-800 font-semibold px-4 py-1 rounded-full text-lg">
                 Join as Member Now
               </div>
               <img
-                src="assets/icons/Double Right.png"
+                src={whiteArrowIcon}
                 alt="arrow"
-                className="w-8 h-8 rounded-full bg-white object-cover"
+                className="w-8 h-8"
               />
             </a>
           </div>
@@ -348,7 +350,7 @@ export const Team = () => {
 // components/Contact.js
 export const Contact = () => {
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-white max-w-6xl mx-auto">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <div>
@@ -397,7 +399,7 @@ export const Contact = () => {
             <div className="flex items-center gap-3">
               <button
                 type="submit"
-                className="bg-green-600 text-white px-6 py-3 rounded-full hover:bg-green-700 transition"
+                className="bg-[#3E8D5A] text-white px-6 py-2 rounded-full hover:bg-green-700 transition"
               >
                 Send Message
               </button>
@@ -413,28 +415,37 @@ export const Contact = () => {
   );
 }
 
-// components/Footer.js
+
+
 export const Footer = () => {
   return (
-    <footer className="footer-section bg-green-700 text-white px-4 py-10">
+    <footer className="footer-section bg-[#3E8D5A] text-white px-4 py-10">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
         <div>
-          <p className="text-lg font-semibold">Take first Step For Education</p>
-          <div className="mt-2 flex items-center flex-wrap gap-2">
-            <input type="email" placeholder="Enter email" className="px-3 py-1 rounded text-black" />
-            <button className="bg-black text-white px-3 py-1 rounded">Subscribe</button>
+          <h6 className="text-5xl font-semibold">Take first Step For <br /> Education</h6>
+          <div className="mt-2 flex items-center flex-wrap gap-2 mt-12" >
+            <input type="email" placeholder="Enter email" className="custom-footer-input" />
+            <button className="bg-white text-black rounded-[15px] px-4 py-1 -ml-24">Subscribe</button>
           </div>
         </div>
-        <div className="text-sm">
+
+        <div className="text-lg">
+          <h6>Or Reach us at</h6>
           <p>Email: support@educationrights.org</p>
           <p>Phone: +91-XXXXXXXXXX</p>
           <p>Address: [Your Office Address]</p>
-          <div className="mt-2">Follow us on Facebook | Instagram | LinkedIn | YouTube</div>
+          <div className="mt-18">Follow us on <br />{' '}
+            <Link to="#">Facebook</Link> |{' '}
+            <Link to="#">Instagram</Link> |{' '}
+            <Link to="#">LinkedIn</Link> |{' '}
+            <Link to="#">YouTube</Link>
+          </div>
         </div>
       </div>
     </footer>
   );
 }
+
 
 
 export default Education_organization_app

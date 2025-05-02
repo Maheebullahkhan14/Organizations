@@ -69,3 +69,50 @@ img.footer-contact-arrow {
   margin-top: -120px;
   margin-left: 180px;
 }
+
+.header-nav {
+  padding: 8px 15px;
+  border-radius: 36px;
+  background-position: center;
+  background-size: cover;
+  border: none;
+  background-image: url("../education_organization/assets/header-bg.png");
+
+}
+
+.header-nav a {
+  margin: 0px 25px;
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 500;
+}
+
+a.contact-header-btn {
+  border: 1px solid dimgray;
+  padding: 4px 21px;
+  padding-left: 5px;
+  border-radius: 35px;
+  background-color: #3E8D5A;
+  color: white;
+  font-family: "Poppins";
+}
+
+.become-mem-btn {
+  padding: 5px;
+  padding-left: 16px;
+  background: #3E8D5A !important;
+}
+
+.custom-border {
+  border-bottom: 1px solid #69696924;
+}
+
+.custom-footer-input {
+  border: 1px solid dimgray;
+  padding: 6px 15px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  width: 350px;
+}

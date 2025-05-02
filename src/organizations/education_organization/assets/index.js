@@ -15,6 +15,7 @@ import membersBanner from "../../education_organization/assets/membership.png"
 import mainLogo from "../../education_organization/assets/broker-logo.png"
 import phoneIcon from "../../education_organization/assets/Phone.png"
 import contactArrowIcon from "../../education_organization/assets/footer-arrow-icon.png"
+import whiteArrowIcon from "../../education_organization/assets/white-arrow-icon.png"
 
 
-export { heroBanner , aboutBanner , heroArrowIcon ,team01 , team03 , team04 , team02 , tickIcon , circulartxt ,service01,service02,service03,service04 , membersBanner , mainLogo , phoneIcon , contactArrowIcon}
+export { heroBanner , aboutBanner , heroArrowIcon ,team01 , team03 , team04 , team02 , tickIcon , circulartxt ,service01,service02,service03,service04 , membersBanner , mainLogo , phoneIcon , contactArrowIcon , whiteArrowIcon}
