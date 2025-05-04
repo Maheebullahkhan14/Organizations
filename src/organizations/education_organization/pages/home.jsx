@@ -1,7 +1,21 @@
 import { heroBanner, aboutBanner, heroArrowIcon, team01, team02, team03, team04, tickIcon, circulartxt, service01, service02, service03, service04, membersBanner, mainLogo, phoneIcon, contactArrowIcon, whiteArrowIcon } from "../assets";
 import "../../education_organization/education_org.css"
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 const Education_organization_app = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration
+      once: true,     // whether animation should happen only once
+    });
+  }, []);
+
+
   return (
     <div className="font-sans text-gray-800 education-app-cover">
       <Header />
@@ -15,6 +29,8 @@ const Education_organization_app = () => {
     </div>
   );
 }
+
+
 
 export const Header = () => {
   return (
@@ -57,24 +73,36 @@ export const Hero = () => {
     <section className="hero-section px-4 py-8 md:py-14 bg-gray-50">
       <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
 
-        <div className="md:w-1/2 mb-8 md:mb-0 flex justify-center">
-          <div className="text-center md:text-left ">
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight">
+        <div
+          className="md:w-1/2 mb-8 md:mb-0 flex justify-center"
+          data-aos="fade-right"
+        >
+          <div className="text-center md:text-left">
+            <h1
+              className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight"
+              data-aos="fade-up"
+            >
               Empowering Education.<br />
               Supporting Institutions.<br />
               Uplifting Educators.
             </h1>
-            <p className="text-gray-600 max-w-md mx-auto md:mx-0 mb-6 text-sm sm:text-base">
+            <p
+              className="text-gray-600 max-w-md mx-auto md:mx-0 mb-6 text-sm sm:text-base"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               Join the movement that’s transforming India’s education ecosystem.
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-4">
+            <div
+              className="flex items-center justify-center md:justify-start gap-4"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <button className="bg-green-500 flex flex-row items-center hover:bg-green-600 text-white px-6 py-2 rounded-full text-sm sm:text-base become-mem-btn">
                 Become a Member
                 <img src={whiteArrowIcon} alt="Logo" className="h-8 ml-3 object-contain" />
-
               </button>
               <div className="text-left flex flex-col items-center md:items-start">
-                {/* <img src={arrowIcon} alt="arrow" className="w-12 h-auto" /> */}
                 <p className="text-gray-500 text-xs mt-1 text-center md:text-left">
                   Educated more than<br />thousand people
                 </p>
@@ -82,14 +110,21 @@ export const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="hero-arrow-icon-box">
+
+        <div className="hero-arrow-icon-box" data-aos="zoom-in" data-aos-delay="600">
           <img src={heroArrowIcon} alt="" />
         </div>
-        <div className="md:w-1/2 mb-8 md:mb-0 flex justify-center">
+
+        <div
+          className="md:w-1/2 mb-8 md:mb-0 flex justify-center"
+          data-aos="fade-left"
+        >
           <img src={heroBanner} alt="Hero visual" className="w-full max-w-md" />
         </div>
+
       </div>
     </section>
+
 
   );
 }
@@ -101,7 +136,7 @@ export const About = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
 
         {/* Left Image Part */}
-        <div className="w-full md:w-1/2 relative">
+        <div className="w-full md:w-1/2 relative" data-aos="fade-right">
           <img
             src={aboutBanner}
             alt="Group Study"
@@ -109,12 +144,20 @@ export const About = () => {
           />
 
           {/* Round Text Badge */}
-          <div className="absolute top-0 p-3 left-1/2 -translate-y-1/2 ml-20 w-40 h-40 rounded-full bg-[#3E8D5A] flex items-center justify-center">
+          <div
+            className="absolute top-0 p-3 left-1/2 -translate-y-1/2 ml-20 w-40 h-40 rounded-full bg-[#3E8D5A] flex items-center justify-center"
+            data-aos="zoom-in"
+            data-aos-delay="300"
+          >
             <img src={circulartxt} alt="Badge" className="custom-rotate" />
           </div>
 
           {/* Vision Box */}
-          <div className="absolute left-18 -bottom-6 w-[250px] bg-[#ebefed] rounded-4xl shadow px-6 py-5">
+          <div
+            className="absolute left-18 -bottom-6 w-[250px] bg-[#ebefed] rounded-4xl shadow px-6 py-5"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             <h6 className="text-lg font-bold mb-2">Our Vision</h6>
             <p className="text-sm leading-relaxed">
               To elevate Indian education to global standards by empowering every stakeholder — institutions, educators, and students.
@@ -123,7 +166,7 @@ export const About = () => {
         </div>
 
         {/* Right Text Part */}
-        <div className="w-full md:w-1/2 mt-10 md:mt-0">
+        <div className="w-full md:w-1/2 mt-10 md:mt-0" data-aos="fade-left">
           <h4 className="text-3xl font-bold mb-4">
             <span className="text-green-600">//</span> About Us
           </h4>
@@ -132,7 +175,11 @@ export const About = () => {
           </p>
 
           {/* Mission Box */}
-          <div className="bg-[#ebefed] rounded-3xl shadow p-6">
+          <div
+            className="bg-[#ebefed] rounded-3xl shadow p-6"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             <h6 className="text-xl font-bold mb-3">Our Mission</h6>
             <ul className="space-y-3 text-base">
               {[
@@ -166,7 +213,7 @@ export const About = () => {
 export const Services = () => {
   return (
     <section className="py-12 px-5 bg-white">
-      <h4 className="text-4xl font-bold text-center mb-12">
+      <h4 className="text-4xl font-bold text-center mb-12" data-aos="fade-up">
         <span className="text-green-600">//</span> Our Services
       </h4>
 
@@ -221,6 +268,8 @@ export const Services = () => {
           <div
             key={index}
             className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center custom-border pb-8"
+            data-aos="fade-up"
+            data-aos-delay={index * 200}
           >
             <div className="md:col-span-1 text-3xl font-bold">{service.number}</div>
             <div className="md:col-span-4 font-semibold text-3xl font-[Pragati_Narrow]">
@@ -243,6 +292,7 @@ export const Services = () => {
       </div>
     </section>
 
+
   );
 }
 
@@ -252,8 +302,9 @@ export const MembershipBenefits = () => {
     <section className="py-12 bg-white max-w-6xl mx-auto">
       <div className="container mx-auto px-5">
         <div className="flex flex-col lg:flex-row items-center gap-12">
+
           {/* Left Content */}
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/2" data-aos="fade-right">
             <h4 className="text-4xl font-bold mb-6 text-left">
               <span className="text-green-600">// </span>Membership Benefits
             </h4>
@@ -272,7 +323,7 @@ export const MembershipBenefits = () => {
                 "Participation in competitive and developmental programs",
                 "Collaboration with top national and international educators",
               ].map((item, idx) => (
-                <li key={idx} className="flex items-start gap-4">
+                <li key={idx} className="flex items-start gap-4" data-aos="fade-up" data-aos-delay={idx * 100}>
                   <img
                     src={tickIcon}
                     alt="check"
@@ -287,6 +338,8 @@ export const MembershipBenefits = () => {
             <a
               href="#"
               className="mt-8 inline-flex items-center gap-3 bg-[#3E8D5A] rounded-full w-fit py-2 px-2"
+              data-aos="zoom-in"
+              data-aos-delay="800"
             >
               <div className="bg-white text-green-800 font-semibold px-4 py-1 rounded-full text-lg">
                 Join as Member Now
@@ -300,7 +353,7 @@ export const MembershipBenefits = () => {
           </div>
 
           {/* Right Image */}
-          <div className="lg:w-1/2 text-center">
+          <div className="lg:w-1/2 text-center" data-aos="fade-left">
             <img
               src={membersBanner}
               alt="Graduate Student"
@@ -311,6 +364,7 @@ export const MembershipBenefits = () => {
       </div>
     </section>
 
+
   );
 }
 
@@ -318,32 +372,27 @@ export const MembershipBenefits = () => {
 export const Team = () => {
   return (
     <section className="team-section px-4 py-12 md:py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-6">Our Team</h2>
+      <div className="max-w-6xl mx-auto" data-aos="fade-up">
+        <h2 className="text-2xl sm:text-3xl font-semibold mb-6 text-center md:text-left">
+          Our Team
+        </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          <div className="text-center text-sm mx-3">
-            <div className="team-banner-box">
-              <img src={team01} alt="" />
+          {[team01, team02, team03, team04].map((teamImg, idx) => (
+            <div
+              key={idx}
+              className="text-center text-sm mx-3"
+              data-aos="zoom-in"
+              data-aos-delay={idx * 100}
+            >
+              <div className="team-banner-box">
+                <img src={teamImg} alt={`Team member ${idx + 1}`} />
+              </div>
             </div>
-          </div>
-          <div className="text-center text-sm mx-3">
-            <div className="team-banner-box">
-              <img src={team02} alt="" />
-            </div>
-          </div>
-          <div className="text-center text-sm mx-3">
-            <div className="team-banner-box">
-              <img src={team03} alt="" />
-            </div>
-          </div>
-          <div className="text-center text-sm mx-3">
-            <div className="team-banner-box">
-              <img src={team04} alt="" />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
+
   );
 }
 
