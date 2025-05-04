@@ -130,7 +130,12 @@ a.contact-header-btn {
   .hero-arrow-icon-box {
     display: none !important;
   }
+
   .custom-footer-input {
     width: 300px;
-}
+  }
+
+  div#root {
+    overflow-x: hidden;
+  }
 }

@@ -114,7 +114,7 @@ export const Hero = () => {
       <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
 
         <div
-          className="md:w-1/2 mb-8 md:mb-0 flex justify-center"
+          className="md:w-1/2 -ml-4 mr-4 mb-8 md:mb-0 flex justify-center"
           data-aos="fade-right"
         >
           <div className="text-center md:text-left">
