@@ -1,10 +1,10 @@
 import { heroBanner, aboutBanner, heroArrowIcon, team01, team02, team03, team04, tickIcon, circulartxt, service01, service02, service03, service04, membersBanner, mainLogo, phoneIcon, contactArrowIcon, whiteArrowIcon } from "../assets";
 import "../../education_organization/education_org.css"
-import { useEffect } from "react";
+import { useEffect , useState } from "react";
 import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+import { FiMenu, FiX } from 'react-icons/fi'; // for hamburger and close icons
 
 const Education_organization_app = () => {
 
@@ -32,40 +32,80 @@ const Education_organization_app = () => {
 
 
 
+
+
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="flex justify-between items-center px-6 py-4">
-      {/* Logo */}
-      <div className="ml-5">
-        <img src={mainLogo} alt="Logo" className="h-16 object-contain" />
-      </div>
-
-      {/* Navigation Links */}
-      <div className="flex space-x-6 font-semibold header-nav">
-        <a href="#Home" className="text-gray-800 hover:text-teal-500">
-          Home
-        </a>
-        <a href="#About" className="text-gray-800 hover:text-teal-500">
-          About Us
-        </a>
-        <a href="#Services" className="text-gray-800 hover:text-teal-500">
-          Our Services
-        </a>
-        <a href="#Membership" className="text-gray-800 hover:text-teal-500">
-          Membership Benefits
-        </a>
-      </div>
-
-      {/* Contact Us Button */}
-      <a href="#" className="flex items-center  transition contact-header-btn">
-        <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full">
-          <img src={phoneIcon} alt="Phone Icon" className="w-5 h-5" />
+    <>
+      <div className="flex justify-between items-center px-6 py-4 relative z-50 bg-white shadow-md">
+        {/* Logo */}
+        <div className="ml-5">
+          <img src={mainLogo} alt="Logo" className="h-16 object-contain" />
         </div>
-        <span className="text-sm font-medium ml-2">Contact Us</span>
-      </a>
-    </div>
-  )
-}
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex space-x-6 font-semibold header-nav">
+          <a href="#Home" className="text-gray-800 hover:text-teal-500">
+            Home
+          </a>
+          <a href="#About" className="text-gray-800 hover:text-teal-500">
+            About Us
+          </a>
+          <a href="#Services" className="text-gray-800 hover:text-teal-500">
+            Our Services
+          </a>
+          <a href="#Membership" className="text-gray-800 hover:text-teal-500">
+            Membership Benefits
+          </a>
+        </div>
+
+        {/* Contact Button (visible on all screens) */}
+        <a href="#" className="hidden md:flex items-center transition contact-header-btn">
+          <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full">
+            <img src={phoneIcon} alt="Phone Icon" className="w-5 h-5" />
+          </div>
+          <span className="text-sm font-medium ml-2">Contact Us</span>
+        </a>
+
+        {/* Hamburger Menu (mobile) */}
+        <div className="md:hidden">
+          <button onClick={() => setIsOpen(!isOpen)} className="text-2xl focus:outline-none">
+            {isOpen ? <FiX /> : <FiMenu />}
+          </button>
+        </div>
+      </div>
+
+      {/* Sidebar for Mobile */}
+      {isOpen && (
+        <div className="md:hidden fixed top-0 left-0 w-64 h-full bg-white shadow-lg z-100 p-6">
+          <div className="flex flex-col space-y-4 font-semibold">
+            <a href="#Home" className="text-gray-800 hover:text-teal-500" onClick={() => setIsOpen(false)}>
+              Home
+            </a>
+            <a href="#About" className="text-gray-800 hover:text-teal-500" onClick={() => setIsOpen(false)}>
+              About Us
+            </a>
+            <a href="#Services" className="text-gray-800 hover:text-teal-500" onClick={() => setIsOpen(false)}>
+              Our Services
+            </a>
+            <a href="#Membership" className="text-gray-800 hover:text-teal-500" onClick={() => setIsOpen(false)}>
+              Membership Benefits
+            </a>
+            <a href="#" className="flex items-center mt-4" onClick={() => setIsOpen(false)}>
+              <div className="flex justify-center items-center w-8 h-8 bg-white rounded-full">
+                <img src={phoneIcon} alt="Phone Icon" className="w-5 h-5" />
+              </div>
+              <span className="text-sm font-medium ml-2">Contact Us</span>
+            </a>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
 
 // components/Hero.js
 export const Hero = () => {
@@ -111,7 +151,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="hero-arrow-icon-box" data-aos="zoom-in" data-aos-delay="600">
+        <div className="hero-arrow-icon-box sm:hidden" data-aos="zoom-in" data-aos-delay="600">
           <img src={heroArrowIcon} alt="" />
         </div>
 
@@ -145,7 +185,7 @@ export const About = () => {
 
           {/* Round Text Badge */}
           <div
-            className="absolute top-0 p-3 left-1/2 -translate-y-1/2 ml-20 w-40 h-40 rounded-full bg-[#3E8D5A] flex items-center justify-center"
+            className="absolute top-0 p-3 lg:left-1/2 left-30 -translate-y-1/2 ml-20 lg:w-40  lg:h-40  w-30 h-30 rounded-full bg-[#3E8D5A] flex items-center justify-center aos-init aos-animate"
             data-aos="zoom-in"
             data-aos-delay="300"
           >
@@ -154,7 +194,7 @@ export const About = () => {
 
           {/* Vision Box */}
           <div
-            className="absolute left-18 -bottom-6 w-[250px] bg-[#ebefed] rounded-4xl shadow px-6 py-5"
+            className="absolute lg:left-18 left-5 lg:-bottom-6 -bottom-30 w-[250px] bg-[#ebefed] rounded-4xl shadow px-6 py-5 aos-init aos-animate"
             data-aos="fade-up"
             data-aos-delay="500"
           >
@@ -166,7 +206,7 @@ export const About = () => {
         </div>
 
         {/* Right Text Part */}
-        <div className="w-full md:w-1/2 mt-10 md:mt-0" data-aos="fade-left">
+        <div className="w-full md:w-1/2 mt-30 md:mt-0" data-aos="fade-left">
           <h4 className="text-3xl font-bold mb-4">
             <span className="text-green-600">//</span> About Us
           </h4>

@@ -19,7 +19,7 @@ body {
 
 .education-app-cover p {
   font-family: "Poppins", serif;
-  
+
 }
 
 .hero-arrow-icon-box {
@@ -54,6 +54,7 @@ textarea.form-control-custom {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -61,7 +62,8 @@ textarea.form-control-custom {
 
 .custom-rotate {
   animation: slowRotate 8s linear infinite;
-  display: inline-block; /* optional, ensures rotation works smoothly */
+  display: inline-block;
+  /* optional, ensures rotation works smoothly */
 }
 
 img.footer-contact-arrow {
@@ -115,4 +117,20 @@ a.contact-header-btn {
   justify-content: space-between;
   background: black;
   width: 350px;
+}
+
+
+@media (min-width: 320px) and (max-width: 420px) {
+  img.footer-contact-arrow {
+    width: 300px;
+    margin-top: -50px;
+    margin-left: 0px;
+  }
+
+  .hero-arrow-icon-box {
+    display: none !important;
+  }
+  .custom-footer-input {
+    width: 300px;
+}
 }
