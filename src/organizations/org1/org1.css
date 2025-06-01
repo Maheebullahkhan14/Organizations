@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+  --primary : #f18825;
+  --primaryborder : 1px solid #f18825
+}
+
+
+body {
+  font-family: "Poppins", serif;
+}
+
+
+.hero-section-main-cover-wrapper {
+  background-image: url("../org1/assets/HeroBanner.png");
+}
+
+.header-nav-link-box {
+  border: var(--primaryborder);
+  border-radius: 31px;
+  padding: 5px 15px;
+  background: rgb(255 255 255 / 1%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.banner-card-img {
+  width: 100%;
+  height: 280px;
+  z-index: 999;
+}
+
+.banner-card-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-card-box {
+  position: relative;
+  margin: 0 auto;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+
+.hero-card-box:hover .banner-card-img {
+  position: relative;
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+.hero-card-box:hover .banner-card-img img {
+  transform: scale(1.02);
+}
+
+.hero-main-outer-cover {
+  display: flex;
+}
+
+span.btn-icon {
+  padding: 5px;
+  background: white;
+  color: orange;
+  border-radius: 50%;
+  margin-left: -14px;
+}
+
+svg.phone-icon {
+  border: 1px solid;
+  color: #0000009e;
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.why-matters-banner-cover img {
+  width: 100%;
+}
+
+.whymatters-card-first-wrapper {
+  padding: 25px;
+  border-radius: 20px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.whymatters-card-first-wrapper h5 {
+  font-size: 18px;
+  width: fit-content ;
+  font-weight: 600;
+}
+
+.whymatters-card-first-wrapper p {
+  font-size: 14px;
+  color: dimgray;
+}
+
+.how-can-help-btn button a {
+  background: rgba(233, 201, 201, 0.4); /* Use rgba with transparency */
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 10px 18px;
+  font-size: 14px;
+  border-radius: 12px;
+  width: 100%;
+  transition: all 0.3s ease;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block; 
+}
+
+.how-can-help-btn button a:hover {
+  background: rgba(233, 201, 201, 0.6);
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+.why-matter-img-section {
+  position: absolute;
+  top: 130px;
+}
+.why-matters-main-cover-wrapper {
+  position: relative;
+}
+
+.custom-footer-input {
+  border: 1px solid dimgray;
+  padding: 6px 15px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-footer-input input {
+  padding: 3px;
+  outline: none;
+  width: 100%;
+}
+
+.custom-footer-input button {
+  padding: 6px 16px;
+  background: white;
+  color: black;
+  font-size: 13px;
+  border-radius: 15px;
+  margin-right: -8px;
+  cursor: pointer;
+}
+
+.swiper{
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}

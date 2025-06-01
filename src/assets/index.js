@@ -1,0 +1,40 @@
+import SwiperImg1 from "../assets/home_assets/swiperImg.png"
+import testimonialStarShape from "../assets/home_assets/testimonial_star_shape.png"
+import testmonialScribbedShape from "../assets/home_assets/testimonial_scribbed_shape.png"
+import testimonialQuoteIcon from "../assets/home_assets/testimonnail-quote-down.png"
+import heroRocketIcon from "../assets/home_assets/hero_rocket.png"
+import heroRocketArrowIcon from "../assets/home_assets/hero_rocket_arrow.png"
+import heroUpArrowIcon from "../assets/home_assets/hero_up_arrow.png"
+import heroAnnouncmentIcon from "../assets/home_assets/hero_announcement.png"
+import heroAnnouncmentArrowIcon from "../assets/home_assets/hero_announcement_arrow.png"
+import heroTargetIcon  from "../assets/home_assets/hero_target.png"
+import heroTargetArrowIcon  from "../assets/home_assets/hero_target_arrow.png"
+import heroSocialInsta from "../assets/home_assets/hero_social_insta.png"
+import heroSocialLinkedin from "../assets/home_assets/hero_social_linkedin.png"
+import heroSocialTikTok from "../assets/home_assets/hero_social_tiktok.png"
+import heroSocialFb from "../assets/home_assets/hero_social_fb.png"
+import heroSocialYt from "../assets/home_assets/hero_social_yt.png"
+import navBg from "../assets/home_assets/nav-bg.png"
+import whatWedoImg from "../assets/home_assets/what_we_do_img.png"
+import whatwedoTransparentImg from "../assets/home_assets/what_we_do_plastic_bg.png"
+import contactConnectImg from "../assets/home_assets/contact_connect.png"
+import contactConnectImg01 from "../assets/home_assets/contact_connect_01.png"
+import testimonialuserIcon from "../assets/home_assets/testimonial-user-icon.png"
+
+import whatweDoTitleImg from "../assets/home_assets/what_we_do_title.png"
+import what_we_do_content_strategy_title from "../assets/home_assets/what_we_do_content_strategy.png"
+import what_we_do_persona_branding_title from "../assets/home_assets/what_we_do_persona_branding.png"
+import what_we_do_post_production_title from "../assets/home_assets/what_we_do_post_production.png"
+
+import contactTransparentbg_01 from "../assets/home_assets/contact-plastic_01.webp"
+import contactTransparentbg_02 from "../assets/home_assets/contact-plastic_02.webp"
+import contactTransparentbg_03 from "../assets/home_assets/contact_plastic_03.webp"
+import contactTransparentbg_04 from "../assets/home_assets/contact_plastic_04.webp"
+import contactScisscor from "../assets/home_assets/contact_scissor.png"
+
+import whatwedoArrow from "../assets/home_assets/what_we_do_arrow.png"
+
+import reel_user_01 from "../assets/home_assets/reel_user_01.jpg"
+
+
+export { SwiperImg1 , testimonialStarShape , testmonialScribbedShape , testimonialQuoteIcon , heroRocketIcon ,heroRocketArrowIcon , heroUpArrowIcon , heroAnnouncmentIcon , heroAnnouncmentArrowIcon , heroTargetIcon , heroTargetArrowIcon , heroSocialInsta , heroSocialLinkedin , heroSocialFb , heroSocialTikTok , heroSocialYt , navBg , whatWedoImg , whatwedoTransparentImg , contactConnectImg , contactTransparentbg_01 , contactTransparentbg_02,contactTransparentbg_03,contactTransparentbg_04 , contactScisscor , whatweDoTitleImg , what_we_do_content_strategy_title , what_we_do_persona_branding_title , what_we_do_post_production_title , whatwedoArrow , contactConnectImg01 ,testimonialuserIcon  , reel_user_01 }
